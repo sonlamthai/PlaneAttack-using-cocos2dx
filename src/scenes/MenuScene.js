@@ -5,7 +5,6 @@ var MenuLayer = cc.Layer.extend({
         this._super();
 
         var winSize = cc.winSize;
-        cc.log(winSize);
 
         var bgMenuScene = new ccui.ImageView(res.bg_MenuScene);
         bgMenuScene.x = winSize.width / 2;

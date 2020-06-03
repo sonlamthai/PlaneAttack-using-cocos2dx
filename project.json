@@ -1,0 +1,37 @@
+{
+    "project_type": "javascript",
+    "debugMode": 1,
+    "showFPS": false,
+    "frameRate": 60,
+    "noCache": false,
+    "id": "gameCanvas",
+    "renderMode": 0,
+    "engineDir": "frameworks/cocos2d-html5",
+    "modules": [
+        "cocos2d",
+        "extensions"
+    ],
+    "jsList": [
+        "src/resource.js",
+        "src/scenes/MenuScene.js",
+        "src/scenes/GameScene.js",
+        "src/layers/GameLayer.js",
+        "src/controller/BulletController.js",
+        "src/controller/EnemyController.js",
+        "src/controller/ItemController.js",
+        "src/controller/GameController.js",
+        "src/objects/Hero.js",
+        "src/objects/Enemy.js",
+        "src/objects/Item.js",
+        "src/enemies/Red.js",
+        "src/enemies/Blue.js",
+        "src/objects/Bullet.js",
+        "src/bullets/HeroBullet.js",
+        "src/bullets/RedBullet.js",
+        "src/bullets/BlueBullet.js",
+        "src/items/Blood.js",
+        "src/items/Destroy.js",
+        "src/items/Score.js",
+        "src/layers/GameOverLayer.js"
+    ]
+}

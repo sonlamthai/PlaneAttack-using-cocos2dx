@@ -10,7 +10,7 @@ var GameOverLayer = cc.Layer.extend({
         bgGameOver.opacity = 100;
         this.addChild(bgGameOver);
 
-        var youLose = new cc.LabelTTF("You Lose !!!", "Arial", 50);
+        var youLose = new cc.LabelTTF("Game Over", "Arial", 50);
         youLose.x = this.winSize.width / 2;
         youLose.y = this.winSize.height / 2 + 200;
         this.addChild(youLose);

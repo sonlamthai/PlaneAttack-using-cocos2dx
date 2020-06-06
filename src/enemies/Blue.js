@@ -40,7 +40,7 @@ var Blue = Enemy.extend({
 
             this.scheduleOnce(function () {
                 this.allowShot = true;
-            }.bind(this), 1);
+            }.bind(this), 0.5);
 
         }
     },

@@ -92,7 +92,7 @@ var GameLayer = cc.Layer.extend({
     },
 
     gameOverCheck: function (layer) {
-        if (this.hero.blood < 0 || this.enemies.length == 0) {
+        if (this.hero.blood <= 0 ) {
             cc.director.pause();
             var gameOverLayer = new GameOverLayer(layer);
             this.addChild(gameOverLayer, 7);

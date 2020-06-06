@@ -5,7 +5,7 @@ var Hero = cc.Sprite.extend({
 
         this.layer = layer;
         this.allowShot = true;
-        this.blood = 2000;
+        this.blood = 3000;
     },
 
     shot: function () {

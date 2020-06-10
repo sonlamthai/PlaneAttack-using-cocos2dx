@@ -11,6 +11,8 @@ var GameLayer = cc.Layer.extend({
 
         this.items = [];
 
+        this.isPlaneMove = true;
+
         this.bgGameSceneDown = new ccui.ImageView(res.bg_GameScene);
         this.bgGameSceneDown.x = this.winSize.width / 2;
         this.bgGameSceneDown.y = this.winSize.height / 2;
@@ -92,10 +94,11 @@ var GameLayer = cc.Layer.extend({
     },
 
     gameOverCheck: function (layer) {
-        if (this.hero.blood <= 0 ) {
+        if (this.hero.blood <= 0) {
             cc.director.pause();
             var gameOverLayer = new GameOverLayer(layer);
             this.addChild(gameOverLayer, 7);
+            this.isPlaneMove = false;
         }
     },
 
@@ -132,7 +135,12 @@ var GameLayer = cc.Layer.extend({
 
     moveHero: function (pos) {
         if (pos.x > 0 && pos.x < this.winSize.width && pos.y > 0 && pos.y < this.winSize.height) {
-            this.hero.setPosition(pos);
+            if (this.isPlaneMove) {
+                this.hero.setPosition(pos);
+            }
+            else {
+                return;
+            }
         }
     },
 });
